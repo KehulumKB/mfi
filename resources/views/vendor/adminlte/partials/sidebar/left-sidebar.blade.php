@@ -52,57 +52,7 @@
                     <!--Configured sidebar links -->
                     {{-- @each('adminlte::partials.sidebar.menu-item', $adminlte->menu('sidebar'), 'item') --}}
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="far fa-fw fa-circle"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item has-treeview ">
-
-                        {{-- Menu toggler --}}
-                        <a class="nav-link" href="#">
-
-                            <i class="far fa-fw fa-circle"></i>
-                            <p>
-                                SubMenu
-                                <i class="fas fa-angle-left right"></i>
-
-                                @isset($item['label'])
-                                    <span class="badge right">
-                                        SubMenu
-                                    </span>
-                                @endisset
-                            </p>
-
-                        </a>
-
-                        {{-- Menu items --}}
-                        <ul class="nav nav-treeview pl-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="far fa-fw fa-circle"></i>
-                                    <p>
-                                        Dashboard
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="far fa-fw fa-circle"></i>
-                                    <p>
-                                        Dashboard
-                                    </p>
-                                </a>
-                            </li>
-
-
-                        </ul>
-
-                    </li>
+                    @include('adminlte::partials.sidebar.admin-sidebar');
 
                 </ul>
             </nav>
@@ -111,7 +61,7 @@
 
     </aside>
 @elseif ($role == 'user')
-   <aside class="main-sidebar {{ config('adminlte.classes_sidebar', 'sidebar-dark-primary elevation-4') }}">
+    <aside class="main-sidebar {{ config('adminlte.classes_sidebar', 'sidebar-dark-primary elevation-4') }}">
 
         {{-- Sidebar brand logo --}}
         @if (config('adminlte.logo_img_xl'))
@@ -129,63 +79,11 @@
                     @if (!config('adminlte.sidebar_nav_accordion')) data-accordion="false" @endif>
                     <!--Configured sidebar links -->
                     {{-- @each('adminlte::partials.sidebar.menu-item', $adminlte->menu('sidebar'), 'item') --}}
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="far fa-fw fa-circle"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item has-treeview ">
-
-                        {{-- Menu toggler --}}
-                        <a class="nav-link" href="#">
-
-                            <i class="far fa-fw fa-circle"></i>
-                            <p>
-                                SubMenu
-                                <i class="fas fa-angle-left right"></i>
-
-                                @isset($item['label'])
-                                    <span class="badge right">
-                                        SubMenu
-                                    </span>
-                                @endisset
-                            </p>
-
-                        </a>
-
-                        {{-- Menu items --}}
-                        <ul class="nav nav-treeview pl-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="far fa-fw fa-circle"></i>
-                                    <p>
-                                        Dashboard
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="far fa-fw fa-circle"></i>
-                                    <p>
-                                        Dashboard
-                                    </p>
-                                </a>
-                            </li>
-
-
-                        </ul>
-
-                    </li>
-
+                    dd
+                    {{-- @include('adminlte::partials.sidebar.admin-sidebar'); --}}
                 </ul>
             </nav>
         </div>
-
 
     </aside>
 

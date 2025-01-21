@@ -14,6 +14,7 @@ Auth::routes();
 
 Route::middleware(['role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/add-member', [AdminController::class, 'addMember'])->name('admin.add-member');
 });
 
 Route::middleware(['role:user'])->group(function () {
