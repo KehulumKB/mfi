@@ -51,7 +51,7 @@
 @push('js')
     <script>
         $(document).ready(function() {
-           
+
         });
     </script>
 @endpush
@@ -60,16 +60,6 @@
 
 @push('css')
     <style type="text/css">
-        {{-- You can add AdminLTE customizations here --}}
-        /*
-            .card-header {
-                border-bottom: none;
-            }
-            .card-title {
-                font-weight: 600;
-            }
-            */
-
         .active {
             background-color: #e2e2e2 !important;
         }
